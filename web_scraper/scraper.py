@@ -17,4 +17,9 @@ def get_citations_needed_report(url):
         report.append(text)
     return '\n'.join(report).strip()
 
+if __name__ == '__main__':
+    count = get_citations_needed_count('https://en.wikipedia.org/wiki/History_of_Mexico')
+    citation_report = get_citations_needed_report('https://en.wikipedia.org/wiki/History_of_Mexico')
 
+    print(f"Citations needed: {count} \n")
+    print(citation_report)
